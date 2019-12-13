@@ -9,8 +9,8 @@ import { booksReducer } from "./state/reducers";
 import { Provider } from "react-redux";
 
 const monsterReducer = combineReducers({
-    books: booksReducer,
-})
+  books: booksReducer
+});
 
 const store = createStore(
   monsterReducer,
@@ -23,7 +23,7 @@ const store = createStore(
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+      <App />
   </Provider>,
   document.getElementById("root")
 );

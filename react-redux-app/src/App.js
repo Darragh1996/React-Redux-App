@@ -1,15 +1,22 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import Display from "./components/Display";
+import Home from "./components/Home";
+import { Route } from "react-router";
+import { BrowserRouter as Router } from "react-router-dom";
+import Navbar from "./components/NavBar";
+import BooksList from './components/BooksList'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Display />
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          <Navbar />
+          <Route exact path="/" component={Home} />
+          <Route path="/books" component={BooksList} />
+        </header>
+      </div>
+    </Router>
   );
 }
 
